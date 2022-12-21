@@ -7,7 +7,7 @@ namespace BenchmarkDotNetDemo;
 [MemoryDiagnoser]
 public class MemoryBenchMarkerDemo
 {
-    private readonly Test _item = new () {Age = 5, Age2 = 2, Name = "1", Name2 = "2"};
+    private readonly Test _item = new ( 5,  2, "1",  "2");
     private const int Capacity = 2000;
     private readonly MyMapper _myMapper = new ();
     [Benchmark(Description = "AutoMapper")]

@@ -2,10 +2,19 @@ namespace BenchmarkDotNetDemo.Models;
 
 public class Test
 {
-    public int Age { get; set; }
-    public int Age2 { get; set; }
-    public string Name { get; set; }
-    public string Name2 { get; set; }
+    public Test(int age, int age2, string name, string name2)
+    {
+        Age = age;
+        Age2 = age2;
+        Name = name;
+        Name2 = name2;
+    }
+
+    public int Age { get; private set; }
+    public int Age2 { get; private set; }
+    public string Name { get; private set; }
+    public string Name2 { get; private set; }
+
     public override string ToString()
     {
         return
